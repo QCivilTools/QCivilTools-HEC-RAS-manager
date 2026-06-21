@@ -107,7 +107,6 @@ Copy the `qct_hecras` folder to:
 %APPDATA%\QGIS\QGIS3\profiles\default\python\plugins\qct_hecras\
 ```
 
-> ⚠ Do **not** install into `Program Files\QGIS\` — admin rights block updates. Use the per-user path above.
 
 ### Reinstalling / updating
 
@@ -146,15 +145,6 @@ The plugin nukes `__pycache__` on every `classFactory()` call to prevent this au
 | Plan runner via Ras.exe | ✅ | ✅ |
 | Plan runner via RAS Commander | ✅ | ✅ |
 
----
-
-## New Zealand context
-
-The QCT suite targets civil engineering and surveying workflows in New Zealand:
-
-- **CRS**: NZTM2000 (EPSG:2193) and local NZ Circuit systems (e.g. Mount Eden 2000, EPSG:2105) both supported; model CRS is auto-detected from the HDF's `Projection` attribute and synced to the QGIS project on load
-- **Coordinate magnitudes**: the bbox mismatch diagnostic includes coordinate-range hints to help identify NZTM2000 vs local circuit CRS mismatches
-- **Units**: SI Units detected from plan HDF
 
 ---
 
@@ -192,16 +182,6 @@ qct_hecras/
 └── metadata.txt           # QGIS plugin metadata
 ```
 
----
-
-## Related QCivilTools plugins
-
-| Plugin | Description |
-|--------|-------------|
-| **QCT 3D Civil Engineering Tool** | Surfaces (TIN/GeoTIFF), alignments, earthworks volume calculations |
-| **QCT RGB Object Detector** | Classify rasters by RGB colour; detect features as polygon/polyline |
-| **QCT Coordinate Converter** | NZGD49 → NZTM2000/NZVD2016 with NZGeoid2016 grid |
-| **QCT PENZD Exporter** | Export point layers to PENZD survey CSV |
 
 ---
 
